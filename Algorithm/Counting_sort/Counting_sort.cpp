@@ -5,7 +5,7 @@
 void counting_sort(int *init_arr, int *sorted_arr, int n);
 void print_arr(int *arr, int n);
 int main(int argc, char **argv) {
-	int length = 10000;//要排序的数字个数
+	int length = 100;//要排序的数字个数
 	int i;//循环变量
 	int *arr = (int *)malloc(sizeof(int)*length);//申请需要排序的数字存储地址
 	int *sorted_arr = (int *)malloc(sizeof(int)*length);//申请排序后的数字存储地址
@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
 		arr[i] = rand() % 100;
 	}
 	printf("排序前数组");
-	//print_arr(arr, length);
+	print_arr(arr, length);
 
 
 	LARGE_INTEGER li;
@@ -34,7 +34,7 @@ int main(int argc, char **argv) {
 	printf("time:%f s\n", usertime);
 
 	printf("排序后数组");
-//	print_arr(sorted_arr, length);
+	print_arr(sorted_arr, length);
 	//释放指针
 	free(arr);
 	free(sorted_arr);
