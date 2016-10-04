@@ -13,7 +13,7 @@ typedef struct _graph {
 	int vexnum;//顶点数
 	int edgnum;//边数
 	int martix[MAX][MAX];//邻接矩阵
-}Graph,*PGraph;
+}Graph, *PGraph;
 int get_position(Graph g, char ch) {
 	int i;
 	for (i = 0; i < g.vexnum; i++)
@@ -58,24 +58,23 @@ Graph* create_graph() {
 /*
 *返回顶点v的第一个邻接顶点的索引，无则返回-1
 */
-int first_vertex(Graph G, int v) {
+int first_vertex(Graph G, int v, int* visited) {
 	int i;
 	if (v<0 || v>(G.vexnum - 1))
 		return -1;
 	for (i = 0; i < G.vexnum; i++) {
-		if (G.martix[v][i] == 1)
+		if (G.martix[v][i] == 1 && visited[i] != 1)
 			return i;
 	}
 	return -1;
 }
-
 /*返回顶点v相对于w的下一个邻接顶点的索引，失败则返回-1*/
-int next_vertix(Graph G, int v, int w) {
+int next_vertix(Graph G, int v, int w, int* visited) {
 	int i;
 	if (v<0 || v>(G.vexnum - 1) || w<0 || w>(G.vexnum - 1))
 		return -1;
 	for (i = w + 1; i < G.vexnum; i++) {
-		if (G.martix[v][i] == 1)
+		if (G.martix[v][i] == 1 && visited[i] != 1)
 			return i;
 	}
 	return -1;
@@ -87,9 +86,8 @@ void DFS(Graph G, int i, int *visited) {
 	int w;
 	visited[i] = 1;
 	printf("%c ", G.vexs[i]);
-	for (w = first_vertex(G, i); w >= 0; w = next_vertix(G, i, w)) {
-		if (!visited[w])
-			DFS(G, w, visited);
+	for (w = first_vertex(G, i, visited); w >= 0; w = next_vertix(G, i, w, visited)) {
+		DFS(G, w, visited);
 	}
 }
 
@@ -122,11 +120,11 @@ void BFS(Graph G) {
 			printf("%c ", G.vexs[i]);
 			queue[rear++] = i;//加入队列
 		}
-		printf(" =while= ");
+		//printf(" =while= ");
 		while (head != rear) {
 			j = queue[head++];
-			for (k = first_vertex(G, j); k > 0; k = next_vertix(G, j, k)) {
-				printf(" -%d- ", k);
+			for (k = first_vertex(G, j, visited); k > 0; k = next_vertix(G, j, k, visited)) {
+				//printf(" -%d- ", k);
 				if (!visited[k]) {
 					visited[k] = 1;
 					printf("%c ", G.vexs[k]);
