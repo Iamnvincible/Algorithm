@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Iterator", "Iterator\Iterat
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuickSort", "QuickSort\QuickSort.vcxproj", "{A9EC37D2-B546-497F-BC02-C9E8EE069D1A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShellSort", "ShellSort\ShellSort.vcxproj", "{2BCA2147-0A0A-4DE5-BFD7-13964B1975AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{A9EC37D2-B546-497F-BC02-C9E8EE069D1A}.Release|x64.Build.0 = Release|x64
 		{A9EC37D2-B546-497F-BC02-C9E8EE069D1A}.Release|x86.ActiveCfg = Release|Win32
 		{A9EC37D2-B546-497F-BC02-C9E8EE069D1A}.Release|x86.Build.0 = Release|Win32
+		{2BCA2147-0A0A-4DE5-BFD7-13964B1975AC}.Debug|x64.ActiveCfg = Debug|x64
+		{2BCA2147-0A0A-4DE5-BFD7-13964B1975AC}.Debug|x64.Build.0 = Debug|x64
+		{2BCA2147-0A0A-4DE5-BFD7-13964B1975AC}.Debug|x86.ActiveCfg = Debug|Win32
+		{2BCA2147-0A0A-4DE5-BFD7-13964B1975AC}.Debug|x86.Build.0 = Debug|Win32
+		{2BCA2147-0A0A-4DE5-BFD7-13964B1975AC}.Release|x64.ActiveCfg = Release|x64
+		{2BCA2147-0A0A-4DE5-BFD7-13964B1975AC}.Release|x64.Build.0 = Release|x64
+		{2BCA2147-0A0A-4DE5-BFD7-13964B1975AC}.Release|x86.ActiveCfg = Release|Win32
+		{2BCA2147-0A0A-4DE5-BFD7-13964B1975AC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
