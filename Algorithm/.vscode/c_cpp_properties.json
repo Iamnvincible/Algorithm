@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${env:llvm}/x86_64-w64-mingw32/include",
+                "${env:llvm}/x86_64-w64-mingw32/include/c++",
+                "${env:llvm}/x86_64-w64-mingw32/include/c++/tr1",
+                "${env:llvm}/x86_64-w64-mingw32/include/c++/backward",
+                "${env:llvm}/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32",
+                "${env:llvm}/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "__GNUC__=7",
+                "__cdecl=__attribute__((__cdecl__))"
+            ],
+            "browse": {
+                "path": [
+                    "${env:llvm}/x86_64-w64-mingw32/include",
+                    "${env:llvm}/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+                    "${env:llvm}/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+                    "${env:llvm}/include/*",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "windowsSdkVersion": "10.0.17134.0",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
