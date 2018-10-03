@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
     // std::cout << "inertion sort" << std::endl;
     // std::cout << std::endl;
     // s.Sort(randomarray);
-    int size = 0;
+    int size = 100;
     if (argc > 1)
     {
         size = atoi(argv[1]);
